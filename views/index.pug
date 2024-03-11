@@ -1,0 +1,35 @@
+extends layout
+
+block content
+ body(style="background-color: #f0f0f0;")
+  h2(style="display:flex; justify-content:center; align-items:center; font-size:24px;") Express Message App
+  a(href="/new" style="display:flex; justify-content:center; align-items:center; font-size:15px;") Add a message!
+
+  each message in messages
+    h2= message.user
+    p Text:#{message.text}
+    p Date:#{message.added}
+
+    
+  style.
+    .message-container {
+    border: 3px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    }
+    
+
+    .message-user {
+    font-weight: bold;
+    margin-bottom: 5px;
+    }
+
+    .message-text {
+    margin-bottom: 5px;
+    }
+
+   .message-added {
+    color: #888;
+    font-size: 12px;
+    }
+

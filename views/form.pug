@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  form(action="/new", method="POST")
+    h3 Author
+    label(for="name") Name:
+    input(type="text", name="name")
+    br
+    label(for="message") Message:
+    input(type="text", name="message")
+    br
+    button(type="submit") Submit
+    br
+    a(href="/") return to home
